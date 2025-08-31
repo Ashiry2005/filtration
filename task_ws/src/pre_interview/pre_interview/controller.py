@@ -55,7 +55,7 @@ class SpeedController(Node):
         self.target_speed = 60.0  
 
         # Tune these for your task
-        self.pid = PID(Kp=0.5, Ki=0.09, Kd=0.07)
+        self.pid = PID(Kp=0.5, Ki=0.85, Kd=0.07)
 
         # Data logging for plotting
         self.start_time = time.time()

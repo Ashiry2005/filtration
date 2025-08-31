@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'vehicle_model = pre_interview.vehicle_model:main',
             'controller = pre_interview.controller:main',
+            'plot = pre_interview.plotter:main',
     ],
 },
 

@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob 
 
 package_name = 'pre_interview'
 
@@ -10,6 +12,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -23,7 +26,6 @@ setup(
             'vehicle_model = pre_interview.vehicle_model:main',
             'controller = pre_interview.controller:main',
             'plot = pre_interview.plotter:main',
-    ],
-},
-
+        ],
+    },
 )
